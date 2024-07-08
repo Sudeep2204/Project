@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas Webpage</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0%;
+        }
+        canvas{
+            display: block;
+            background-color:whitesmoke;
+            margin:0 auto;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="MyCanvas"width="500" height="500"></canvas>
+    <script>
+        var canvas=document.getElementById("MyCanvas");
+        var c=canvas.get context("2d");
+        c.font="30px Arial";
+        c.fillstyle="blue";
+        c.filltext("sony",10,50);
+        c.font="30px Arial";
+        c.fillstyle="yellow";
+        c.strokestyle("IT-A",10,90);
+        c.beginpath()
+        c.moveTo(250,300);
+        c.LineTo(250,300);
+        c.strokestyle="blue";
+        c.stroke();
+        c.beginpath()
+        c.arc(250,250,60,0,2*Math.PI);
+        c.strokestyle="green";
+        c.stroke();
+    </script>
+</body>
+</html>
